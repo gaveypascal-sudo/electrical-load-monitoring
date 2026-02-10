@@ -177,7 +177,7 @@ int main() {
         int choice = menu();
 
         switch (choice) {
-            case 1:11
+            case 1:
                 registerAppliance(appliances);
                 break;
             case 2:
