@@ -356,7 +356,7 @@ int main() {
     while (true) {
         int choice = menu();
 
-        switch (choice) {
+        switch (choice) { 
             case 1: {
                 Appliance a = registerAppliance();
                 appliances.push_back(a);
