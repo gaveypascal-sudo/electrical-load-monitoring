@@ -1,0 +1,14 @@
+================ BILLING REPORT ================
+No.  Name                kWh/day     Cost/day    
+------------------------------------------------
+1    Kettle              0.003       0.03        
+2    iron                0.008       0.10        
+3    Rice Cooker         0.003       0.04        
+4    Kettle              0.007       0.09        
+5    Iron                0.002       0.02        
+------------------------------------------------
+Total Energy (per day): 0.023 kWh/day
+Total Cost (per day):   0.28
+Monthly Energy (30d):   0.696 kWh
+Monthly Cost (30d):     8.35
+================================================
