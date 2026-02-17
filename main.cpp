@@ -5,6 +5,9 @@
 #include <iomanip>
 #include <algorithm>
 #include <cctype>
+#include <fstream>
+#include <sstream>
+
 
 using namespace std;
 
@@ -27,6 +30,47 @@ static string toLowerStr(string s) {
     transform(s.begin(), s.end(), s.begin(),
               [](unsigned char c) { return static_cast<char>(tolower(c)); });
     return s;
+}
+const string FILE_NAME = "appliances.txt";
+void saveAppliances(const vector<Appliance>& appliances) {
+    ofstream out(FILE_NAME);
+
+    if (!out) {
+        cout << "Error saving data.\n";
+        return;
+    }
+
+    for (const auto& a : appliances) {
+        out << a.name << "|"
+            << a.powerW << "|"
+            << a.hoursPerDay << "\n";
+    }
+}
+vector<Appliance> loadAppliances() {
+    vector<Appliance> appliances;
+    ifstream in(FILE_NAME);
+
+    if (!in) return appliances; // file may not exist yet
+
+    string line;
+
+    while (getline(in, line)) {
+        stringstream ss(line);
+        string name, powerStr, hoursStr;
+
+        if (!getline(ss, name, '|')) continue;
+        if (!getline(ss, powerStr, '|')) continue;
+        if (!getline(ss, hoursStr, '|')) continue;
+
+        Appliance a;
+        a.name = name;
+        a.powerW = stod(powerStr);
+        a.hoursPerDay = stod(hoursStr);
+
+        appliances.push_back(a);
+    }
+
+    return appliances;
 }
 
 int menu() {
@@ -226,7 +270,8 @@ void calculateBill(const vector<Appliance>& appliances) {
 }
 
 int main() {
-    vector<Appliance> appliances;
+    vector<Appliance> appliances = loadAppliances();
+
 
     while (true) {
         int choice = menu();
@@ -235,6 +280,7 @@ int main() {
             case 1: {
                 Appliance a = registerAppliance();
                 appliances.push_back(a);
+                saveAppliances(appliances);
                 break;
             }
             case 2:
@@ -254,6 +300,7 @@ int main() {
                 break;
 
             case 0:
+                saveAppliances(appliances);2
                 cout << "Goodbye!\n";
                 return 0;
 
