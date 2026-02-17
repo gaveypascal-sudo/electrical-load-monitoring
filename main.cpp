@@ -300,7 +300,7 @@ int main() {
                 break;
 
             case 0:
-                saveAppliances(appliances);2
+                saveAppliances(appliances);
                 cout << "Goodbye!\n";
                 return 0;
 
