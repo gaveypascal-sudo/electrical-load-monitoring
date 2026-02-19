@@ -1,5 +1,0 @@
-Kettle|2.5|1
-iron|2|4
-Rice Cooker|3.2|1
-Kettle|2.5|3
-Iron|2|1
