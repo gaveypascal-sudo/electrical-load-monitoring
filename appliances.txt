@@ -1,0 +1,3 @@
+Iron|75|1
+Fridge|90|24
+Kettle|120|0.5
