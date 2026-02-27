@@ -1,3 +1,5 @@
 *.exe
 main.exe
 tempCodeRunnerFile.cpp
+.vscode/
+
