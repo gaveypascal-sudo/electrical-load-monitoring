@@ -1,4 +1,3 @@
-# FINAL SUBMISSION  
 # Electrical Load Monitoring & Billing Simulator
 
 ## MID SEMESTER CAPSTONE PROJECT
