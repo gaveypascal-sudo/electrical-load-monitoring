@@ -3,3 +3,4 @@ Fridge|150|24
 Kettle|120|1
 Fan|65|6
 AC|2000|5
+dryer|120|2
