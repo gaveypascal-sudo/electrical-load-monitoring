@@ -6,9 +6,10 @@ No.  Name                kWh/day     Cost/day
 3    Kettle              0.120       2.40        
 4    Fan                 0.390       7.80        
 5    AC                  10.000      200.00      
+6    dryer               0.240       4.80        
 ------------------------------------------------
-Total Energy (per day): 14.155 kWh/day
-Total Cost (per day):   283.10
-Monthly Energy (30d):   424.650 kWh
-Monthly Cost (30d):     8493.00
+Total Energy (per day): 14.395 kWh/day
+Total Cost (per day):   287.90
+Monthly Energy (30d):   431.850 kWh
+Monthly Cost (30d):     8637.00
 ================================================
